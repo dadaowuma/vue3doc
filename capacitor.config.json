@@ -1,5 +1,5 @@
 {
   "appId": "com.pelli.vuedoc",
-  "appName": "vue doc",
-  "webDir": "www"
+  "appName": "vue3 doc",
+  "webDir": "docs"
 }

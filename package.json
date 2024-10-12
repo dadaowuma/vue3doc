@@ -5,9 +5,9 @@
   "description": "为了方便随时随地查阅vue3文档，将相关文档打包成APP",
   "main": "index.js",
   "scripts": {
-    "start": "http-server www",
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "start": "http-server docs",
+    "dev": "vitepress dev notes",
+    "build": "vitepress build notes",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dadaowuma@163.com",

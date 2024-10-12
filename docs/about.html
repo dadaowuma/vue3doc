@@ -31,6 +31,10 @@
         margin: 5px 0;
       }
 
+      .github-link-btn {
+        color: rgb(0, 0, 238);
+      }
+
       .back-home {
         position: absolute;
         /* width: 100%; */
@@ -45,6 +49,16 @@
   <body>
     <div class="intro-item">
       在学习和使用vue的过程中，经常需要查阅文档。有时候我们没有带笔记本电脑，这个时候就不太方便了。于是我做了简单的整理，将vue3文档打包成一个APP，这样我们就可以在没有笔记本电脑的情况下通过手机APP学习vue了，比如...时。
+    </div>
+
+    <div>
+      此项目仓库地址为：<span
+        onclick="handleOnlineNav.call(this, event)"
+        class="github-link-btn"
+        data-href="https://github.com/dadaowuma/vue3doc"
+        >https://github.com/dadaowuma/vue3doc</span
+      >
+      欢迎star
     </div>
 
     <div class="intro-item">
