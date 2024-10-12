@@ -6,17 +6,19 @@
 
 ## 目录说明
 
-- android Android APP 的源文件
-- docs vue3 离线文档
-- files 保存在项目周期内用到的一些资源
-- ios iOS APP 的源文件
-- notes 记录在此项目进行过程中的一些关键点
+- `android`: Android APP 的源文件
+- `docs`: vue3 离线文档
+- `files`: 保存在项目周期内用到的一些资源
+- `ios`: iOS APP 的源文件
+- `notes`: 记录在此项目进行过程中的一些关键点
 
 ## 启动项目
 
 我在操作此项目过程中使用的 node 版本为`20.17.0`。由于项目用到了`vitepress`，建议 node 版本为`18+`或者`20+`。
 
-参考：https://vitejs.cn/vite5-cn/guide/#scaffolding-your-first-vite-project
+> 参考：[https://cn.vitejs.dev/guide/#scaffolding-your-first-vite-project](https://cn.vitejs.dev/guide/#scaffolding-your-first-vite-project)
+
+![node版本](./files/assets/node-v-require.png)
 
 ### 将项目下载到本地
 
