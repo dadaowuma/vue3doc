@@ -26,15 +26,23 @@ $ npm run dev # localhost:5173
 
 ### Android 端效果
 
-<img src='./files/assets/ad-01.jpeg' style="width: 300px"/>
-<img src='./files/assets/ad-02.jpeg' style="width: 300px"/>
-<img src='./files/assets/ad-03.jpeg' style="width: 300px"/>
+<table>
+  <tr>
+    <td><img src='./files/assets/ad-01.jpeg' style="width: 300px"/></td>
+    <td><img src='./files/assets/ad-02.jpeg' style="width: 300px"/></td>
+    <td><img src='./files/assets/ad-03.jpeg' style="width: 300px"/></td>
+  </tr>
+</table>
 
 ### iOS 端效果
 
-<img src='./files/assets/ios-01.jpeg' style="width: 300px"/>
-<img src='./files/assets/ios-02.jpeg' style="width: 300px"/>
-<img src='./files/assets/ios-03.jpeg' style="width: 300px"/>
+<table>
+  <tr>
+    <td><img src='./files/assets/ios-01.jpeg' style="width: 300px"/></td>
+    <td><img src='./files/assets/ios-02.jpeg' style="width: 300px"/></td>
+    <td><img src='./files/assets/ios-03.jpeg' style="width: 300px"/></td>
+  </tr>
+</table>
 
 ## 注意事项
 
