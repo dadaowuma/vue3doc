@@ -1,5 +1,6 @@
 // 检测是否为iOS设备
-var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+var isIOS =
+  /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && !window.MSStream
 // 检测是否是Android设备
 var isAndroid = /Android/.test(navigator.userAgent)
 

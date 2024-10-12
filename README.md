@@ -48,9 +48,9 @@ $ npm run dev # localhost:5173
 
 ### APP 下载
 
-Android 可通过 release 下载 apk 文件
+Android 可通过 release 下载 apk 文件。
 
-iOS 端，敬请期待。
+iOS 端，感兴趣的朋友，可将`Apple ID`通过邮箱`dadaowuma@163.com`发送给我，我将您添加至测试员，即可通过`TestFlight`查看 APP。
 
 ### 离线文档返回首页的问题
 
