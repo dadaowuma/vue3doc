@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">vue3 doc</string>
+    <string name="title_activity_main">vue3 doc</string>
+    <string name="package_name">com.pelli.vuedoc</string>
+    <string name="custom_url_scheme">com.pelli.vuedoc</string>
+</resources>

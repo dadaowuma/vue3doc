@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, minimum-scale=1,maximum-scale=1"
+    />
+    <title>关于</title>
+    <style type="text/css">
+      html {
+        padding: constant(safe-area-inset-top) constant(safe-area-inset-right)
+          constant(safe-area-inset-bottom) constant(safe-area-inset-left) !important; /* 兼容 iOS < 11.2 */
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+          env(safe-area-inset-bottom) env(safe-area-inset-left) !important; /* 兼容 iOS >= 11.2 */
+      }
+    </style>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+        padding: 10px;
+        padding-top: 50px;
+      }
+
+      .intro-item {
+        margin: 5px 0;
+      }
+
+      .back-home {
+        position: absolute;
+        /* width: 100%; */
+        bottom: 50px;
+        font-size: 12px;
+        text-align: center;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro-item">
+      在学习和使用vue的过程中，经常需要查阅文档。有时候我们没有带笔记本电脑，这个时候就不太方便了。于是我做了简单的整理，将vue3文档打包成一个APP，这样我们就可以在没有笔记本电脑的情况下通过手机APP学习vue了，比如...时。
+    </div>
+
+    <div class="intro-item">
+      若在使用过程中遇到问题，可通过邮件联系我。本人联系方式 dadaowuma@163.com
+    </div>
+
+    <div class="back-home">
+      <a href="/">返回首页</a>
+    </div>
+
+    <script>
+      /**
+       * 获取Capacitor的插件
+       * @param {string} plugin_name
+       * @returns
+       */
+      function getCapPluginNamespace(plugin_name) {
+        if ('Capacitor' in window) {
+          const cap = window.Capacitor
+
+          if (cap && 'Plugins' in cap) {
+            const plugs = cap.Plugins
+
+            if (plugs && plugin_name in plugs) {
+              return plugs[plugin_name]
+            }
+          }
+        }
+
+        return null
+      }
+
+      async function handleOnlineNav(e) {
+        const target = e.target
+        const href = target.getAttribute('data-href')
+
+        // https://capacitorjs.com/docs/apis/browser
+        const Browser = getCapPluginNamespace('Browser')
+        if (Browser) {
+          await Browser.open({ url: href })
+        }
+      }
+    </script>
+  </body>
+</html>

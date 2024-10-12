@@ -1,0 +1,27 @@
+{
+  "name": "vue-doc-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "* 中文文档地址 https://cn.vuejs.org/\r * 中文文档源码 https://github.com/vuejs-translations/docs-zh-cn",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server www",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "http-server": "^14.1.1",
+    "vitepress": "^1.4.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/browser": "^6.0.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2",
+    "@capacitor/status-bar": "^6.0.1"
+  }
+}

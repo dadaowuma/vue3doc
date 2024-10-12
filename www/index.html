@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no, minimum-scale=1,maximum-scale=1"
+    />
+    <title>vue全家桶文档</title>
+    <style type="text/css">
+      html {
+        padding: constant(safe-area-inset-top) constant(safe-area-inset-right)
+          constant(safe-area-inset-bottom) constant(safe-area-inset-left) !important; /* 兼容 iOS < 11.2 */
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+          env(safe-area-inset-bottom) env(safe-area-inset-left) !important; /* 兼容 iOS >= 11.2 */
+      }
+    </style>
+    <style>
+      body {
+        margin: 0;
+        padding: 10px;
+        overflow-x: hidden;
+      }
+      h1 {
+        margin: 5px;
+      }
+      h3 {
+        margin: 3px;
+      }
+
+      .nav-container {
+        background-color: #42d392;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      .nav-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        margin: 5px;
+        height: 50px;
+      }
+
+      .online-link-btn {
+        color: rgb(0, 0, 238);
+      }
+
+      .logo-img {
+        width: 24px;
+      }
+
+      .about-app {
+        position: absolute;
+        bottom: 50px;
+        font-size: 12px;
+        text-align: center;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>vue3全家桶文档</h1>
+
+    <div class="nav-container">
+      <div><h3>在线文档</h3></div>
+
+      <div class="nav-item">
+        <span
+          onclick="handleOnlineNav.call(this, event)"
+          class="online-link-btn"
+          data-href="https://cn.vuejs.org/"
+          >https://cn.vuejs.org/</span
+        >
+      </div>
+      <div class="nav-item">
+        <span
+          onclick="handleOnlineNav.call(this, event)"
+          class="online-link-btn"
+          data-href="https://router.vuejs.org/zh/"
+          >https://router.vuejs.org/zh/</span
+        >
+      </div>
+      <div class="nav-item">
+        <span
+          onclick="handleOnlineNav.call(this, event)"
+          class="online-link-btn"
+          data-href="https://pinia.vuejs.org/zh/"
+          >https://pinia.vuejs.org/zh/</span
+        >
+      </div>
+      <div class="nav-item">
+        <span
+          onclick="handleOnlineNav.call(this, event)"
+          class="online-link-btn"
+          data-href="https://vuex.vuejs.org/zh/"
+          >https://vuex.vuejs.org/zh/</span
+        >
+      </div>
+    </div>
+
+    <div class="nav-container">
+      <div><h3>离线文档</h3></div>
+      <div class="nav-item">
+        <img class="logo-img" src="./assets/vue-logo.svg" />
+        <a href="/vue3/index.html">vue3@3</a>
+      </div>
+
+      <div class="nav-item"><a href="/router/index.html">router@4.4.5</a></div>
+      <div class="nav-item">
+        <img class="logo-img" src="./assets/pinia-logo.svg" /><a
+          href="/pinia/index.html"
+          >pinia@2.2.4</a
+        >
+      </div>
+      <div class="nav-item"><a href="/vuex4/index.html">vuex@4</a></div>
+    </div>
+
+    <div class="about-app"><a href="/about.html">关于</a></div>
+
+    <script>
+      /**
+       * 获取Capacitor的插件
+       * @param {string} plugin_name
+       * @returns
+       */
+      function getCapPluginNamespace(plugin_name) {
+        if ('Capacitor' in window) {
+          const cap = window.Capacitor
+
+          if (cap && 'Plugins' in cap) {
+            const plugs = cap.Plugins
+
+            if (plugs && plugin_name in plugs) {
+              return plugs[plugin_name]
+            }
+          }
+        }
+
+        return null
+      }
+
+      async function handleOnlineNav(e) {
+        const target = e.target
+        const href = target.getAttribute('data-href')
+
+        // https://capacitorjs.com/docs/apis/browser
+        const Browser = getCapPluginNamespace('Browser')
+        if (Browser) {
+          await Browser.open({ url: href })
+        } else {
+          window.open(url)
+        }
+      }
+    </script>
+  </body>
+</html>
